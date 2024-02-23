@@ -1,1 +1,0 @@
-# skijumpmanager-relase
