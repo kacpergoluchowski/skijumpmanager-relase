@@ -1,14 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Jura";
+    color: white;
 }
 
-.main-container {
-    background-color: red;
-    height: 100%;
+@media only screen and (min-width: 1651px) {
 
-    h1 {
-        color: white;
+    // start page 
+    .start-page {
+        background-image: url('../src/assets/images/startPageBackground.png');
+        background-size: cover;
+        height: 100vh;
+
+        .title {
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            font-size: 105px;
+        }
+
+        .buttons-box {
+            width: 35%;
+            height: 35%;
+            position: absolute;
+            right: 15%;
+            top: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10%;
+
+            button {
+                width: 664px;
+                height: 102px;
+                border-radius: 35px;
+                font-size: 40px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-left: 60px;
+                background: linear-gradient(to left, #0C2359, #455CA8);
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1650px) and (min-width: 1200px) {
+    .start-page {
+        background-image: url('../src/assets/images/startPageBackground.png');
+        background-size: cover;
+        height: 100vh;
+
+        .title {
+            position: absolute;
+            top: 12%;
+            right: 5%;
+            font-size: 5rem;
+        }
+
+        .buttons-box {
+            width: 35%;
+            height: 40%;
+            position: absolute;
+            right: 15%;
+            top: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10%;
+
+            button {
+                width: 600px;
+                height: 140px;
+                border-radius: 35px;
+                font-size: 35px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-left: 60px;
+                background: linear-gradient(to left, #0C2359, #455CA8);
+                border: none;
+                cursor: pointer;
+            }
+        }
     }
 }

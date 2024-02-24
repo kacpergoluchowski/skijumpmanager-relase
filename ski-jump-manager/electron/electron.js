@@ -5,14 +5,15 @@ const isDev = process.env.IS_DEV == "true" ? true : false;
  
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 650,
+    width: 1366,
+    height: 768,
     autoHideMenuBar: true,
-    resizable: false,
+    resizable: true,
     frame: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
+      enableRemoteModule: true,
       contextIsolation: false
     },
   });
@@ -33,7 +34,6 @@ function createWindow() {
   }
  
 }
- 
  
 app.whenReady().then(() => {
   createWindow()
