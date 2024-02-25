@@ -6,87 +6,246 @@
     box-sizing: border-box;
     font-family: "Jura";
     color: white;
+    overflow: hidden;
 }
 
-@media only screen and (min-width: 1651px) {
+:root {
+    --reject-color: #C8102E;
+    --accept-color: #48A34C;
+}
 
-    // start page 
-    .start-page {
-        background-image: url('../src/assets/images/startPageBackground.png');
-        background-size: cover;
-        height: 100vh;
+a {
+    text-decoration: none;
+}
 
-        .title {
-            position: absolute;
-            top: 15%;
-            right: 5%;
-            font-size: 105px;
-        }
+// ------------------------------------------------------------------------ start page ------------------------------------------------------------------------
+.start-page {
+    background-image: url('../src/assets/images/startPageBackground.png');
+    background-size: cover;
+    height: 100vh;
 
-        .buttons-box {
-            width: 35%;
-            height: 35%;
-            position: absolute;
-            right: 15%;
-            top: 30%;
+    .title {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        font-size: 105px;
+    }
+
+    .buttons-box {
+        width: 39%;
+        height: 40%;
+        position: absolute;
+        right: 15%;
+        top: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        button {
+            width: 100%;
+            height: 120px;
+            border-radius: 35px;
+            font-size: 40px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            gap: 10%;
+            align-items: center;
+            gap: 20px;
+            padding-left: 60px;
+            background: linear-gradient(to left, #0C2359, #455CA8);
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------ choose country page ------------------------------------------------------------------------
+.choose_country-page {
+    width: 100vw;
+    height: 100vh;
+
+    header {
+        background-color: #445BA7;
+        height: 15vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2vw;
+        font-size: 24px;
+
+        .button-section {
+            display: flex;
 
             button {
-                width: 664px;
-                height: 102px;
-                border-radius: 35px;
-                font-size: 40px;
+                width: 425px;
+                height: 84px;
                 display: flex;
                 align-items: center;
-                gap: 20px;
-                padding-left: 60px;
-                background: linear-gradient(to left, #0C2359, #455CA8);
+                padding-left: 30px;
                 border: none;
+                border-radius: 35px;
+                font-size: 36px;
+                gap: 20px;
                 cursor: pointer;
+            }
+
+            .reject-button {
+                background-color: var(--reject-color);
+            }
+
+            .accept-button {
+                background-color: var(--accept-color);
+            }
+        }
+    }
+
+    .choose_country_content {
+        display: flex;
+    }
+
+    .choose_country_content--countries {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #0E255C;
+        width: 75vw;
+        height: 85vh;
+    }
+
+    .choose_country_content--card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 18vw;
+        height: 26vh;
+    }
+
+    .choose_country_content--card:hover {
+        background-color: #354a7a;
+        cursor: pointer;
+    }
+
+    .choose_country_content--country_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #334583;
+        width: 25vw;
+    }
+
+    .choose_country--confirm {
+        background-color: #445BA7;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 50vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        div {
+            display: flex;
+            gap: 20px;
+
+            button {
+                width: 15vw;
+                height: 5vh;
+                font-size: 30px;
+                border: none;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+
+            .accept {
+                background-color: var(--accept-color);
+            }
+
+            .reject {
+                background-color: var(--reject-color);
             }
         }
     }
 }
 
-@media only screen and (max-width: 1650px) and (min-width: 1200px) {
+@media only screen and (max-width: 1650px) {
     .start-page {
-        background-image: url('../src/assets/images/startPageBackground.png');
-        background-size: cover;
-        height: 100vh;
-
         .title {
-            position: absolute;
-            top: 12%;
-            right: 5%;
-            font-size: 5rem;
+            font-size: 4rem;
         }
 
         .buttons-box {
-            width: 35%;
-            height: 40%;
-            position: absolute;
-            right: 15%;
+            height: 50%;
+            right: 12%;
             top: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            gap: 10%;
 
             button {
-                width: 600px;
-                height: 140px;
-                border-radius: 35px;
+                width: 100%;
+                height: 95px;
                 font-size: 35px;
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                padding-left: 60px;
-                background: linear-gradient(to left, #0C2359, #455CA8);
-                border: none;
-                cursor: pointer;
+            }
+        }
+    }
+
+    .choose_country-page {
+        width: 100vw;
+        height: 100vh;
+
+        header {
+            height: 13vh;
+            padding: 0 2vw;
+            font-size: 20px;
+
+            .button-section {
+                button {
+                    width: 350px;
+                    height: 60px;
+                    border-radius: 35px;
+                    font-size: 26px;
+                    gap: 20px;
+                }
+            }
+        }
+
+        .choose_country_content--countries {
+            height: 87vh;
+        }
+
+        .choose_country_content--card {
+            img {
+                width: 7vw;
+            }
+        }
+
+        .choose_country_content--country_info {
+            img {
+                width: 10vw;
+            }
+        }
+
+        .choose_country--confirm {
+            padding: 25px;
+
+            h1 {
+                font-size: 35px;
+            }
+
+            div {
+                gap: 15px;
+
+                button {
+                    font-size: 25px;
+                }
             }
         }
     }

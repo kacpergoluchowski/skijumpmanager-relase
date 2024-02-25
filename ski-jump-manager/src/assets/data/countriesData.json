@@ -1,0 +1,125 @@
+{
+    "countries": [
+      {
+        "id": 0,
+        "name": "Austria",
+        "stars": 5,
+        "levelOfPlayers": "doskonały",
+        "levelOfJuniors": "doskonały",
+        "levelOfObject": "doskonały", 
+        "finacialCondition": "doskonały",
+        "status": "gigant"
+      },
+      {
+        "id": 1,
+        "name": "Niemcy",
+        "stars": 5,
+        "levelOfPlayers": "doskonały",
+        "levelOfJuniors": "b. dobry",
+        "levelOfObject": "doskonały",
+        "finacialCondition": "doskonały",
+        "status": "gigant"
+      },
+      {
+        "id": 2,
+        "name": "Słowenia",
+        "stars": 5,
+        "levelOfPlayers": "b.dobry",
+        "levelOfJuniors": "dobry",
+        "levelOfObject": "doskonały",
+        "finacialCondition": "b. dobry",
+        "status": "czołówka światowa"
+      },
+      {
+        "id": 3,
+        "name": "Norwegia",
+        "stars": 5,
+        "levelOfPlayers": "b. dobry",
+        "levelOfJuniors": "b. dobry",
+        "levelOfObject": "doskonały",
+        "finacialCondition": "dobry",
+        "status": "czołowka światowa"
+      },
+      {
+        "id": 4,
+        "name": "Japonia",
+        "stars": 4,
+        "levelOfPlayers": "dobry",
+        "levelOfJuniors": "dobry",
+        "levelOfObject": "dobry",
+        "finacialCondition": "dobry",
+        "status": "średnia"
+      },
+      {
+        "id": 5,
+        "name": "Polska",
+        "stars": 4,
+        "levelOfPlayers": "dobry",
+        "levelOfJuniors": "dobry",
+        "levelOfObject": "dobry",
+        "finacialCondition": "dobry",
+        "status": "upadła potęga"
+      },
+      {
+        "id": 6,
+        "name": "Szwajcaria",
+        "stars": 3,
+        "levelOfPlayers": "średni",
+        "levelOfJuniors": "dobry",
+        "levelOfObject": "dobry",
+        "finacialCondition": "średni",
+        "status": "potentat"
+      },
+      {
+        "id": 7,
+        "name": "Finlandia",
+        "stars": 3,
+        "levelOfPlayers": "średni",
+        "levelOfJuniors": "dobry",
+        "levelOfObject": "dobry",
+        "finacialCondition": "średni",
+        "status": "potentat"
+      },
+      {
+        "id": 8,
+        "name": "Włochy",
+        "stars": 3,
+        "levelOfPlayers": "słaby",
+        "levelOfJuniors": "słaby",
+        "levelOfObject": "średni",
+        "finacialCondition": "średni",
+        "status": "potentat"
+      },
+      {
+        "id": 9,
+        "name": "USA",
+        "stars": 2,
+        "levelOfPlayers": "słaby",
+        "levelOfJuniors": "słaby",
+        "levelOfObject": "średni",
+        "finacialCondition": "słaby",
+        "status": "słaby"
+      },
+      {
+        "id": 10,
+        "name": "Estonia",
+        "stars": 2,
+        "levelOfPlayers": "b. słaby",
+        "levelOfJuniors": "słaby",
+        "levelOfObject": "słaby",
+        "finacialCondition": "słaba",
+        "status": "słaby"
+      },
+      {
+        "id": 11,
+        "name": "Czechy",
+        "stars": 2,
+        "levelOfPlayers": "b. słaby",
+        "levelOfJuniors": "b. słaby",
+        "levelOfObject": "słaby",
+        "finacialCondition": "b. słaby",
+        "status": "b. słaba"
+      }
+    ]
+  }
+  
