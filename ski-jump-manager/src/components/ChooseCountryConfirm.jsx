@@ -1,8 +1,11 @@
 import React from "react";
 import '../app.scss';
-const { ipcRenderer } = window.require('electron')
+const { ipcRenderer } = window.require('electron');
+import { useNavigate } from "react-router-dom";
 
 export default function ChooseCountryConfirm( {hideBox, selectedCountry} ) {
+    const navigator = useNavigate();
+
     function createNewGame() {
         const countryData = {
             id: selectedCountry[0],
@@ -10,6 +13,8 @@ export default function ChooseCountryConfirm( {hideBox, selectedCountry} ) {
         }
 
         ipcRenderer.send('createNewGame', countryData);
+    
+        navigator('/home');
     }
 
     return (

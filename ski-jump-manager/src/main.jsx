@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import StartPage from './pages/StartPage.jsx'
 import ChooseCountryPage from './pages/ChooseCountryPage.jsx'
+import HomePage from './pages/HomePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: '/chooseCountry',
     element: <ChooseCountryPage />
+  }, 
+  {
+    path: '/home',
+    element: <HomePage />
   }
 ])
 

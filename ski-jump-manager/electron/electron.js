@@ -6,11 +6,12 @@ const isDev = process.env.IS_DEV == "true" ? true : false;
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1366,
-    height: 768,
+    width: 1080,
+    height: 650,
     autoHideMenuBar: true,
     resizable: true,
     frame: true,
+    fullscreen: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
@@ -98,3 +99,31 @@ ipcMain.on('createNewGame', (event, selectedCountry) => {
     }
   })
 })
+
+ipcMain.on('loadSave', (event) => {
+  loadSaveGame(event);
+})
+
+function loadSaveGame(event) {
+  const fileComponents = {
+    folderName: "Ski jumping manager",
+    subFolderName: "savegame1",
+    fileName: 'savegame.json'
+  }
+
+  const documentsPath = app.getPath('documents');
+  const folderPath = path.join(documentsPath, fileComponents.folderName);
+  const subFolderPath = path.join(folderPath, fileComponents.subFolderName);
+  const filePath = path.join(subFolderPath, fileComponents.fileName);
+
+  fs.readFile(filePath, 'utf-8', (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      const countryDataJson = JSON.parse(data);
+      
+      event.reply('saveGameDataResponse', countryDataJson);
+    }
+  })
+}
