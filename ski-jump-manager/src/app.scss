@@ -14,6 +14,22 @@
     --accept-color: #48A34C;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #465385;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334583;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 a {
     text-decoration: none;
 }
@@ -242,6 +258,14 @@ a {
         .home_page--dashboard {
             display: flex;
 
+            table {
+                width: 100%;
+
+                td {
+                    padding-block: 5px;
+                }
+            }
+
             .home_page--card_wrapper {
                 width: 60vw;
                 height: 85vh;
@@ -254,6 +278,16 @@ a {
                     background-color: rgba(68, 91, 167, 0.5);
                     width: 29vw;
                     height: 40vh;
+                    padding: 15px;
+
+                    .home_page--card--headline {
+                        font-size: 35px;
+                        margin-bottom: 10px;
+                    }
+
+                    .home_page--card--competitor_row {
+                        font-size: 30px;
+                    }
                 }
             }
 
@@ -262,6 +296,17 @@ a {
                 height: 82vh;
                 width: 21.5vw;
                 margin: auto;
+                padding: 15px;
+                overflow-y: auto;
+
+                table {
+                    font-size: 20px;
+
+                    img {
+                        width: 25px;
+                        vertical-align: middle;
+                    }
+                }
             }
         }
     }
@@ -347,7 +392,7 @@ a {
         }
     }
 
-    .header {    
+    .header {
         img {
             width: 8vw;
         }
@@ -355,11 +400,36 @@ a {
         .header--section {
             font-size: 17px;
         }
-    
+
         .header--continue_button {
             width: 18vw;
             height: 8vh;
             font-size: 30px;
+        }
+    }
+
+    .home_page--dashboard {
+        .home_page--card_wrapper {
+            .home_page--team-card {
+                overflow: auto;
+                table {
+                    tr {
+                        td {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home_page--ranking {
+        table {
+            tr {
+                td {
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
