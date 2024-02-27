@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import StartPage from './pages/StartPage.jsx'
 import ChooseCountryPage from './pages/ChooseCountryPage.jsx'
 import HomePage from './pages/HomePage.jsx'
+import TeamPage from './pages/TeamPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element: <HomePage />
+  }, 
+  {
+    path: '/team',
+    element: <TeamPage />
   }
 ])
 

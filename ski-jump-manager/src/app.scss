@@ -210,6 +210,7 @@ a {
         height: 10vh;
         background-color: inherit;
         border: none;
+        width: 100%;
         cursor: pointer;
     }
 
@@ -305,6 +306,53 @@ a {
                     img {
                         width: 25px;
                         vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team_page {
+    display: flex;
+
+    .team_page--content {
+        background-color: #0E255C;
+        width: 83vw;
+
+        .team_page--content--menu {
+            background-color: #3d4d85;
+            height: 7vh;
+
+            button {
+                height: 100%;
+                width: 15vw;
+                font-size: 30px;
+                background-color: inherit;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #303d6b;
+            }
+        }
+
+        .team_page--content--team {
+            table {
+                td {
+                    width: 14vw;
+                    font-size: 30px;
+                    text-align: center;
+                }
+
+                .team_page--content--team--headlines {
+                    background-color: #3d4d85;
+                }
+
+                tr {
+                    td {
+                        padding-block: 10px;
                     }
                 }
             }
@@ -412,6 +460,7 @@ a {
         .home_page--card_wrapper {
             .home_page--team-card {
                 overflow: auto;
+
                 table {
                     tr {
                         td {
@@ -428,6 +477,31 @@ a {
             tr {
                 td {
                     font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .team_page {
+        .team_page--content {
+            .team_page--content--team {
+                table {
+                    td {
+                        width: 14vw;
+                        font-size: 30px;
+                        text-align: center;
+                    }
+
+                    .team_page--content--team--headlines {
+                        background-color: #3d4d85;
+                    }
+
+                    tr {
+                        td {
+                            padding-block: 5px;
+                            font-size: 25px;
+                        }
+                    }
                 }
             }
         }

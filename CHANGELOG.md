@@ -1,8 +1,19 @@
+## [0.0.6] - 2024-02-27
+
+### Added
+ - Added teams page.
+ - Media queries for teams page is done (min width: 1200px).
+ - Added ski hills sub page to project.
+
+### Deleted
+ - Deleted camps, shop and technology from project.
+
+## ________________________________________________________________________________________________
 ## [0.0.5] - 2024-02-27
 
 ### Added
  - Added some content to home page (teamA, teamB cards, ranking card)
- - Media queries for these cards 
+ - Media queries for these cards is done (min width: 1200px).
 
 ### Fixed
  - Downloading save game data happens now in page file then this data is passed by useContext down the component.
