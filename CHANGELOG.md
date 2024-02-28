@@ -1,3 +1,11 @@
+## [0.0.7] - 2024-02-28
+
+### Added
+ - Added national list page
+ - Media queries for national list is done (min-width: 1200px).
+ - Added possibility flipping competitors beetween teams (national list / teams pages).
+
+## ________________________________________________________________________________________________
 ## [0.0.6] - 2024-02-27
 
 ### Added

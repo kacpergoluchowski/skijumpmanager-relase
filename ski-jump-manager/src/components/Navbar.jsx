@@ -6,9 +6,6 @@ import staffPic from '../assets/images/staffPic.png';
 import competitionsPic from '../assets/images/competitionsPic.png'
 import calendarPic from '../assets/images/calendarPic.png';
 import trainingPic from '../assets/images/trainingPic.png';
-import campsPic from '../assets/images/campsPic.png';
-import technologyPic from '../assets/images/technologyPic.png';
-import shopPic from '../assets/images/shopPic.png';
 import finacialPic from '../assets/images/finacialPic.png';
 import { Link } from "react-router-dom";
 
@@ -17,7 +14,7 @@ export default function Navbar() {
         <nav className="navbar">
             <Link to = '/home'> <button> <img src={homePagePic} /> Home </button> </Link>
             <Link to = '/team'> <button> <img src={skiJumpersCadrePic} /> Kadra </button> </Link>
-            <button> <img src={nationalListPic} /> Lista krajowa </button>
+            <Link to = '/nationalPage'> <button> <img src={nationalListPic} /> Lista krajowa </button> </Link>
             <button> <img src={staffPic} /> Sztab </button>
             <button> <img src={competitionsPic} /> Zawody </button>
             <button> <img src={calendarPic} /> Kalendarz </button>

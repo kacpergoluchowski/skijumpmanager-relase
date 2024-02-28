@@ -360,6 +360,49 @@ a {
     }
 }
 
+.national_page {
+    display: flex;
+
+    .national_page--content {
+        width: 83vw;
+
+        .national_page--content--competitors_list {
+            background-color: #0E255C;
+            overflow: auto;
+            height: 85vh;
+
+            table {
+                td {
+                    width: 14vw;
+                    font-size: 30px;
+                    text-align: center;
+                    padding-block: 10px;
+                }
+
+                tr:hover {
+                    background-color: #445BA7;
+                    cursor: pointer;
+                }
+
+                .national_page--content--competitors_list--headlines {
+                    background-color: #3d4d85;
+                }
+            }
+        }
+    }
+}
+
+.team_page--content--team--competitor_row {
+    cursor: pointer;
+    button {
+        width: 100%;
+        height: 10vh;
+        font-size: 25px;
+        background-color: inherit;
+        cursor: pointer;
+    }
+}
+
 @media only screen and (max-width: 1650px) {
     .start-page {
         .title {
@@ -488,7 +531,7 @@ a {
                 table {
                     td {
                         width: 14vw;
-                        font-size: 30px;
+                        font-size: 20px;
                         text-align: center;
                     }
 
@@ -504,6 +547,28 @@ a {
                     }
                 }
             }
+        }
+    }
+
+    .national_page {    
+        .national_page--content {
+            .national_page--content--competitors_list {    
+                table {
+                    td {
+                        font-size: 20px;
+                    }
+                    
+                    tr:hover {
+                        background-color: #0C2359;
+                    }
+                }
+            }
+        }
+    }
+
+    .team_page--content--team--competitor_row {
+        button {
+            font-size: 15px;
         }
     }
 }

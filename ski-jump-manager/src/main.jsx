@@ -5,6 +5,7 @@ import StartPage from './pages/StartPage.jsx'
 import ChooseCountryPage from './pages/ChooseCountryPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import TeamPage from './pages/TeamPage.jsx'
+import NationalPage from './pages/NationalPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/team',
     element: <TeamPage />
+  },
+  {
+    path: '/nationalPage',
+    element: <NationalPage />
   }
 ])
 
