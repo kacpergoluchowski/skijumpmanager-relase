@@ -17,7 +17,7 @@ export default function Navbar() {
             <Link to = '/nationalPage'> <button> <img src={nationalListPic} /> Lista krajowa </button> </Link>
             <button> <img src={staffPic} /> Sztab </button>
             <button> <img src={competitionsPic} /> Zawody </button>
-            <button> <img src={calendarPic} /> Kalendarz </button>
+            <Link to = '/calendar'> <button> <img src={calendarPic} /> Kalendarz </button> </Link>
             <button> <img src={trainingPic} /> Trening </button>
             <button> <img src={finacialPic} /> Finanse </button>
         </nav>

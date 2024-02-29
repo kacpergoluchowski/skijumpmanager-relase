@@ -6,6 +6,7 @@ import ChooseCountryPage from './pages/ChooseCountryPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import TeamPage from './pages/TeamPage.jsx'
 import NationalPage from './pages/NationalPage.jsx'
+import CalendarPage from './pages/CalendarPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,15 @@ const router = createBrowserRouter([
   {
     path: '/nationalPage',
     element: <NationalPage />
+  },
+  {
+    path: '/calendar',
+    element: <CalendarPage />
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 )

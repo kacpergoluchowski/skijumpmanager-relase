@@ -396,10 +396,86 @@ a {
     cursor: pointer;
     button {
         width: 100%;
-        height: 10vh;
+        height: 5vh;
         font-size: 25px;
         background-color: inherit;
         cursor: pointer;
+    }
+}
+
+.calendar_page {
+    display: flex;
+
+    .calendar_page--content {
+        width: 83vw;
+    
+        .calendar_page--content--calendar {
+            background-color: #0E255C;
+            height: 85vh;
+            overflow-y: auto;
+
+            table {
+                width: 100%;
+                
+                tr {
+                    text-align: center;
+
+                    td {
+                        font-size: 22px;
+                        width: 10%;
+                        padding-block: 10px;
+                    }
+                }
+            }
+
+            .calendar_page--content--calendar--headlines {
+                background-color: #3d4d85;
+
+                td {
+                    padding-block: 10px;
+                    font-size: 30px;
+                }
+            }
+
+            .calendar_page--content--calendar--competition-row {
+                img {
+                    width: 35px;
+                    vertical-align: middle;
+                }
+            }
+
+            .amount {
+                width: 5%;
+            }
+
+            .hill-size {
+                width: 5%;
+            }
+
+            .date {
+                width: 5%;
+            }
+
+            .results {
+                width: 5%;
+            }
+
+            .gp {
+                color: green;
+            }
+
+            .raw-air {
+                color: rgb(100, 100, 201)
+            }
+
+            .fht {
+                color: yellowgreen;
+            }
+
+            .wc {
+                color: red;
+            }
+        }
     }
 }
 
@@ -569,6 +645,34 @@ a {
     .team_page--content--team--competitor_row {
         button {
             font-size: 15px;
+        }
+    }
+
+    .calendar_page {    
+        .calendar_page--content {        
+            .calendar_page--content--calendar {
+                table {
+                    tr {
+                        td {
+                            font-size: 15px;
+                        }
+                    }
+                }
+    
+                .calendar_page--content--calendar--headlines {
+    
+                    td {
+                        padding-block: 10px;
+                        font-size: 20px;
+                    }
+                }
+    
+                .calendar_page--content--calendar--competition-row {
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
         }
     }
 }
