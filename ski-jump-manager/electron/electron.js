@@ -68,7 +68,8 @@ ipcMain.on('createNewGame', (event, selectedCountry) => {
     name: selectedCountry.name,
     day: 10,
     month: 5,
-    year: 2024
+    year: 2024,
+    diff: 65
   }
 
   const documentsPath = app.getPath('documents');
@@ -122,8 +123,71 @@ function loadSaveGame(event) {
     }
     else {
       const countryDataJson = JSON.parse(data);
+      console.log(countryDataJson)
       
       event.reply('saveGameDataResponse', countryDataJson);
     }
   })
 }
+
+ipcMain.on('getDate', (event) => {
+  const fileComponents = {
+    folderName: "Ski jumping manager",
+    subFolderName: "savegame1",
+    fileName: 'savegame.json'
+  }
+
+  const documentsPath = app.getPath('documents');
+  const folderPath = path.join(documentsPath, fileComponents.folderName);
+  const subFolderPath = path.join(folderPath, fileComponents.subFolderName);
+  const filePath = path.join(subFolderPath, fileComponents.fileName);
+
+  fs.readFile(filePath, 'utf-8', (err, data) => {
+    if (err) 
+      console.log(err)
+    else {
+      const dateFileJson = JSON.parse(data);
+      const dateResponse = [{
+        day: dateFileJson.day, 
+        month: dateFileJson.month, 
+        year: dateFileJson.year
+      }];
+      
+      event.reply('dateResponse', dateResponse);
+    }
+  })
+})
+
+ipcMain.on('goToNextDay', (event, body) => {
+  const fileComponents = {
+    folderName: "Ski jumping manager",
+    subFolderName: "savegame1",
+    fileName: 'savegame.json'
+  }
+
+  const documentsPath = app.getPath('documents');
+  const folderPath = path.join(documentsPath, fileComponents.folderName);
+  const subFolderPath = path.join(folderPath, fileComponents.subFolderName);
+  const filePath = path.join(subFolderPath, fileComponents.fileName);
+
+  fs.readFile(filePath, 'utf-8', (err, data) => {
+    if (err) 
+      console.log(err);
+    else {
+      const saveGameJson = JSON.parse(data);
+
+      saveGameJson.day = body[0].nextDay.getDate();
+      saveGameJson.month = body[0].nextDay.getMonth();
+      saveGameJson.year = body[0].nextDay.getFullYear();
+      saveGameJson.diff = body[0].diff;
+
+      const stringSaveGame = JSON.stringify(saveGameJson);
+
+      fs.writeFile(filePath, stringSaveGame, 'utf-8', (err) => {
+        if(!err) {
+          console.log('data pomyślnie zaaktualizowana!');
+        }
+      })
+    }
+  })
+})

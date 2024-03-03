@@ -1,3 +1,10 @@
+## [0.0.9] - 2024-03-03
+
+### Added
+ - Added function countdown days to next competition.
+ - Added current date display.
+
+## ________________________________________________________________________________________________
 ## [0.0.8] - 2024-02-29
 
 ### Added

@@ -13,6 +13,7 @@ export default function HomePage() {
     }, [])
 
     ipcRenderer.on('saveGameDataResponse', (event, data) => {
+        console.log(data);
         setCountryData(data);
     })
 
